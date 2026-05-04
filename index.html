@@ -39,7 +39,7 @@
         <img src="./img/fotofeperfil.jpeg" alt="Foto de Amanda Fligikowski" class="foto-perfil">
         <!-- Nome e título profissional -->
         <h1>Amanda Fligikowski</h1>
-        <p class="cabecalho-sub">Desenvolvedor Back End</p>
+        <p class="cabecalho-sub">Desenvolvedora Front-end</p>
 
     </main>
     <!-- Seção "Sobre mim" -->
@@ -48,11 +48,8 @@
         <div class="sobre-caixa">
             <!-- Descrição pessoal e objetivos profissionais -->
             <p class="sobre-paragrafo">
-                Olá, meu nome é Amanda, tenho 22 anos e sou estudante de Análise e Desenvolvimento de Sistemas. Meu foco
-                está na área de backend e cibersegurança, e atualmente estou aprofundando meus conhecimentos em Python,
-                além de lógica de programação, banco de dados e segurança da informação. Apesar de estar estudando HTML,
-                CSS e JavaScript para montar este portfólio, meu interesse principal é me especializar em
-                desenvolvimento backend, aplicando essas linguagens e práticas no mercado.
+                Olá, meu nome é Amanda, tenho 22 anos, sou estudante de Análise e Desenvolvimento de Sistemas e estou
+                focada em front-end. No futuro, pretendo me desenvolver como desenvolvedora full stack.
             </p>
         </div>
     </section>
@@ -109,52 +106,29 @@
         </div>
 
     </section>
-    <!-- Seção de contato com formulário -->
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em contato</h2>
-        <!-- Formulário que envia mensagem para o WhatsApp -->
-        <form class="formulario-contatos" id="formulario" onsubmit="enviarWhats(event)">
-            <!-- Campo de nome -->
-            <div class="grupo-form">
-                <input class="campo-form" placeholder="Nome" id="nome">
-            </div>
-
-            <!-- Campo de mensagem -->
-            <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="6"></textarea>
-            </div>
-            <!-- Botão de envio -->
-            <button type="submit" class="botao">Enviar WhatsApp</button>
-        </form>
-    </section>
-
-    <script>
-        // Função responsável por capturar os dados do formulário
-        // e abrir o WhatsApp com a mensagem preenchida
-        function enviarWhats(event) {
-            event.preventDefault()// impede recarregamento da página
-
-            // Captura valores digitados pelo usuário
-
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            // Número de destino
-            const telefone = '5541992819330'
-            // Monta o texto da mensagem
-            const texto = `Olá! Eu me chamo ${nome}, ${mensagem}`
-            // Codifica a mensagem para URL
-            const msgFormatada = encodeURIComponent(texto)
-            // Gera link do WhatsApp
-            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
-            console.log(url)
-            // Abre o WhatsApp em nova aba
-            window.open(url, '_blank')
-        }
-
+   
 
 
     </script>
 
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato por E-mail</h2>
+
+        <form class="formulario-contatos" id="formulario"
+            action="https://formsubmit.co/d328b2eae8be8277c39f36e561a5ec22" method="POST">
+
+            <div class="grupo-form">
+                <input type="email" name="email" class="campo-form" placeholder="E-mail:" required>
+            </div>
+
+            <div class="grupo-form">
+               <textarea class="campo-form" name="mensagem" placeholder="Digite sua Mensagem" id="mensagem" rows="6" required></textarea>
+            </div>
+
+            <button type="submit" class="botao-email">Enviar</button>
+
+        </form>
+    </section>
 </body>
 
 </html>
