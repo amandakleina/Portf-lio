@@ -46,7 +46,7 @@ body {
     justify-content: center;
     /* centraliza os itens */
     list-style: none;
-    gap: 3rem;
+    gap: 1rem;
     /* espaço entre os links */
 }
 
@@ -106,6 +106,7 @@ h1 {
     color: var(--primaria);
     font-weight: bold;
     margin: 20px;
+    text-align: center;
 }
 
 /* Subtítulo */
@@ -270,7 +271,7 @@ h1 {
 /* Título contatos */
 .contatos-titulo {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 50px;
 }
 
@@ -314,7 +315,7 @@ h1 {
 }
 
 /* Botão de envio */
-.botao {
+.botao-email{
     color: var(--maisEscuro);
     background: linear-gradient(45deg, var(--primaria), var(--secundaria));
     padding: 1rem 2rem;
@@ -327,7 +328,7 @@ h1 {
 }
 
 /* Hover do botão */
-.botao:hover {
+.botao-email:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgb(219, 147, 182);
 }
@@ -345,6 +346,7 @@ h1 {
         /* gradientes simulando partículas */
         radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%), radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%), var(--maisEscuro);
 }
+
 
 /* Animação de flutuação da imagem */
 @keyframes flutuar {
