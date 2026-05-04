@@ -1,0 +1,360 @@
+/* Reset básico: remove margens/paddings padrão e define box model consistente */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* Fonte padrão do site */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Ativa scroll suave ao clicar nos links internos (#id) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Variáveis globais de cores (facilita manutenção e padronização visual) */
+:root {
+    --primaria: rgb(209, 131, 169);
+    --secundaria: rgb(243, 200, 221);
+    --escuro: rgb(58, 52, 91);
+    --maisEscuro: rgb(75, 21, 53);
+    --claro: #ffff;
+    --vidro: rgb(255, 255, 255, 0.1);
+}
+
+/* Estilo geral da página */
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+/* Barra de navegação fixa no topo */
+.navegacao {
+    position: fixed;
+    /* permanece visível ao rolar */
+    background: rgba(113, 85, 122, 0.8);
+    /* efeito transparente */
+    width: 100%;
+    z-index: 100;
+    /* garante que fique acima dos outros elementos */
+    padding: 1.5rem;
+}
+
+/* Container do menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    /* centraliza os itens */
+    list-style: none;
+    gap: 3rem;
+    /* espaço entre os links */
+}
+
+.menu-link {
+    /* Estilo dos links do menu */
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+}
+
+/* Linha animada abaixo do link (efeito hover) */
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* Gradiente nas cores do tema */
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+
+/* Animação da linha ao passar o mouse */
+.menu-link:hover::after {
+    width: 100%;
+}
+
+/* Seção principal centralizada vertical e horizontalmente */
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilo da foto de perfil */
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    /* brilho ao redor */
+    box-shadow: 0 0 20px rgb(219, 147, 182);
+    border-radius: 50%;
+    /* deixa redonda */
+    border: 4px solid var(--vidro);
+    /* animação de flutuação */
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+/* Nome principal */
+h1 {
+    font-family: serif;
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 20px;
+}
+
+/* Subtítulo */
+.cabecalho-sub {
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+/* Seção sobre */
+.sobre {
+    padding: 6rem 2rem;
+}
+
+/* Título da seção */
+.sobre-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Caixa com efeito de vidro */
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+
+    backdrop-filter: blur(10px);
+    /* efeito vidro */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Efeito ao passar o mouse */
+.sobre-caixa:hover {
+    box-shadow: 0 10px 20px rgb(219, 147, 182);
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* Texto da seção */
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Seção formação */
+.formacao {
+    padding: 6rem 2rem;
+}
+
+/* Título formação */
+.formacao-titulo {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+}
+
+/* Efeito hover do card */
+.formacao-card:hover {
+    box-shadow: 0 10px 20px rgb(219, 147, 182);
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* caixa do card */
+.formacao-caixa {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+/* Card de formação */
+.formacao-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Imagem do card */
+.formacao-imagem {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Informações do curso */
+.info-formacao {
+    margin-bottom: 5px;
+}
+
+/* caixa do texto do card */
+.caixa-textform {
+    padding: 1.5rem;
+}
+
+/* Texto descritivo */
+.paragrafo-formacao {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
+ /* agora vou estilizar a sessão projetos igual fiz com a sessão formação*/
+.projetos {
+    padding: 6rem 2rem;
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+}
+
+.projetos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 10px 20px rgb(219, 147, 182);
+    transform: translateY(-10px) scale(1.03);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.projetos-imagem {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.caixa-textos {
+    padding: 1.5rem;
+}
+
+.paragrafo-projetos {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
+
+.info-projetos {
+    margin-bottom: 5px;
+}
+
+/* Seção contatos */
+.contatos {
+    padding: 6rem 2rem;
+}
+
+/* Título contatos */
+.contatos-titulo {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+}
+
+/* Formulário centralizado */
+.formulario-contatos {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+/* Campos de input */
+.campo-form {
+    width: 100%;
+    padding: 1rem;
+    background: var(--maisEscuro);
+    border-radius: 8px;
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+    outline: none;
+}
+
+/* Efeito no formulário ao passar o mouse */
+.formulario-contatos:hover {
+    box-shadow: 0 10px 20px rgb(219, 147, 182);
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* Foco nos campos */
+.campo-form:focus {
+    border-color: var(--secundaria);
+    box-shadow: 0 0 10px rgb(219, 147, 182);
+}
+
+/* Espaçamento entre campos */
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+/* Botão de envio */
+.botao {
+    color: var(--maisEscuro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5 ease;
+}
+
+/* Hover do botão */
+.botao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgb(219, 147, 182);
+}
+
+/* Fundo com efeito de partículas */
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background:
+        /* gradientes simulando partículas */
+        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%), radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%), var(--maisEscuro);
+}
+
+/* Animação de flutuação da imagem */
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20%);
+    }
+}
