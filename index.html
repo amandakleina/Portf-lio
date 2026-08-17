@@ -1,135 +1,195 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Portifolio Website</title>
 </head>
 
 <body>
-    <!-- Elemento visual de fundo (efeito de partículas via CSS ou JS) -->
-    <div class="particulas"></div>
-    <!-- Menu de navegação principal -->
-    <nav class="navegacao">
-        <ul class="menu">
-            <!-- Links internos que navegam entre seções da página -->
+
+    <header class="header">
+        <a href="#" class="logo"><span>Sofia Fligikowski</span></a>
+
+        <ul class="nav-links">
             <li>
-                <a href="#inicio" class="menu-link">Início</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="#formacao" class="menu-link">Formação</a>
-            </li>
-             <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contatos" class="menu-link">Contato</a>
+                <a href="#about">Sobre</a>
             </li>
 
+            <li>
+                <a href="#education">Formação</a>
+            </li>
+
+
+            <li>
+                <a href="#projects">Projetos</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contato</a>
+            </li>
         </ul>
-    </nav>
-    <!-- Seção inicial (apresentação principal) -->
-    <main id="inicio" class="cabecalho">
-        <!-- Foto de perfil do portfólio -->
-        <img src="./img/fotofeperfil.jpeg" alt="Foto de Amanda Fligikowski" class="foto-perfil">
-        <!-- Nome e título profissional -->
-        <h1>Amanda Fligikowski</h1>
-        <p class="cabecalho-sub">Desenvolvedora Front-end</p>
 
-    </main>
-    <!-- Seção "Sobre mim" -->
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre mim</h2>
-        <div class="sobre-caixa">
-            <!-- Descrição pessoal e objetivos profissionais -->
-            <p class="sobre-paragrafo">
-                Olá, meu nome é Amanda, tenho 22 anos, sou estudante de Análise e Desenvolvimento de Sistemas e estou
-                focada em front-end. No futuro, pretendo me desenvolver como desenvolvedora full stack.
-            </p>
-        </div>
-    </section>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-    <!-- Seção de formação acadêmica -->
-    <section id="formacao" class="formacao">
-        <h2 class="formacao-titulo">Formação</h2>
-        <div class="formacao-caixa">
-            <div class="formacao-card">
-                <!-- Logo da instituição de ensino -->
-                <Img src="./img/Logo-Uninter-300x200.jpg" alt="formacao-imagem" class="formacao-imagem">
-                <div class="caixa=textform">
-                    <!-- Informações do curso -->
-                    <h3 class="info-formacao">Análise e Desenvolvimento de Sistemas</h3>
-                    <p class="paragrafo-formacao">Cursando Análise e Desenvolvimento de Sistemas – 2ª fase (A Fase II –
-                        2026)</p>
+        <a href="https://github.com/sofiafligikowski" target="_blank" class="visit-btn">Visite meu GitHub</a>
+
+    </header>
+
+    <section id="about" class="about">
+
+        <div class="about-container">
+            <img src="./img/fotosofia.jpeg" alt="Foto-da-Sofia">
+
+            <div class="info-box">
+                <div class="text">
+                    <h3>Olá, eu sou a</h3>
+                    <h1 class="txtEfeito" data-texto="Sofia Fligikowski">Sofia Fligikowski</h1>
+                    <span>Frontend Developer</span>
                 </div>
 
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/1GWebkPP19uGaSkRx6ydWA8fHmWLBAcEE/view?usp=sharing"
+                        class="btn" target="_blank">Download Cv</a>
+                    <a href="https://mail.google.com/mail/u/1" target="_blank" class="btn">Email</a>
+                </div>
 
-            </div>
-        </div>
-    </section>
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Meus projetos</h2>
-        <div class="projetos-caixa">
-
-            <div class="projetos-card">
-                <img src="./img/to do list.jpeg" alt="todolist" class="projetos-imagem">
-                <div class="caixa-textos">
-                    <h3 class="info-projetos">To Do List</h3>
-                    <p class="paragrafo-projetos">Esse projeto é uma lista de tarefas interativa, onde o usuário pode
-                        adicionar e remover tarefas.</p>
+                <div class="socials">
+                    <a target="_blank" href="https://github.com/sofiafligikowski">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/amanda-sofia-kleina-fligikowski-75b13122b/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
-
-            <div class="projetos-card">
-                <img src="./img/Imglogin.jpeg" alt="todolist" class="projetos-imagem">
-                <div class="caixa-textos">
-                    <h3 class="info-projetos">login</h3>
-                    <p class="paragrafo-projetos">Esse projeto é uma página de login interativa.</p>
-                </div>
-            </div>
-
-            <div class="projetos-card">
-                <img src="./img/calculadora.jpeg" alt="todolist" class="projetos-imagem">
-                <div class="caixa-textos">
-                    <h3 class="info-projetos">Calculadora</h3>
-                    <p class="paragrafo-projetos">Esse projeto é uma calculadora simples que permite realizar operações
-                        básicas.</p>
-                </div>
-            </div>
-
-
         </div>
 
     </section>
-   
 
+    <section id="education" class="education">
 
-    </script>
+        <h2 class="section-title">Formação</h2>
 
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em contato por E-mail</h2>
+        <div class="education-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Uninter</span>
+                    <h3>Ánalise e Desenvolvimento de Sistemas</h3>
+                    <p>Em andamento (conclusão prevista: 2026)</p>
+                </div>
 
-        <form class="formulario-contatos" id="formulario"
-            action="https://formsubmit.co/d328b2eae8be8277c39f36e561a5ec22" method="POST">
+                <div class="grid-card">
+                    <i class="fa-solid fa-file-code"></i>
+                    <span>DevClub</span>
+                    <h3>Full Stack Developer</h3>
+                    <p>Curso Full Stack Developer no DevClub com foco em desenvolvimento de aplicações web modernas.
+                        Tecnologias abordadas: JavaScript, React, Node.js, Express, MongoDB, REST APIs e metodologias
+                        ágeis.
+                        Atualmente desenvolvendo projetos práticos que aplicam conceitos de escalabilidade e qualidade
+                        de código.</p>
+                </div>
 
-            <div class="grupo-form">
-                <input type="email" name="email" class="campo-form" placeholder="E-mail:" required>
+                <div class="grid-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span>Dio</span>
+                    <H3>Curos complementares</H3>
+                    <p>Formação Complementar
+                        - DevOps Fundamentals – DIO (em andamento)
+                        <br>
+                        Conteúdos: Integração contínua, entrega contínua, automação de pipelines.
+                        <br>
+                        - Git e GitHub para Iniciantes – DIO
+                        Conteúdos: Controle de versão, colaboração em projetos.
+                        <br>
+                        - Introdução ao JavaScript – DIO
+                        Conteúdos: Fundamentos da linguagem, manipulação de DOM.
+                    </p>
+                </div>
             </div>
+            <img src="./img/fotosofia.jpeg" alt="Foto-da-Sofia">
+        </div>
 
-            <div class="grupo-form">
-               <textarea class="campo-form" name="mensagem" placeholder="Digite sua Mensagem" id="mensagem" rows="6" required></textarea>
-            </div>
-
-            <button type="submit" class="botao">Enviar</button>
-
-        </form>
     </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projetos Recentes</h2>
+
+        <div class="projects-grid">
+            <div class="projects-card">
+                <img src="./img/projetoDevClub.png" alt="foto-do-projeto">
+                <h3>Projeto clone DevClub</h3>
+                <p>Projeto desenvolvido no curso DevClub, com foco em transformar um layout criado no Figma em código
+                    funcional.</p>
+
+                <div class="btn-group">
+                    <a target="_blank" href="https://github.com/sofiafligikowski/Projeto-CSS-B-sico" class="btn">GitHub Repo</a>
+                </div>
+            </div>
+
+            <div class="projects-card">
+                <img src="./img/projeto-calculadora.png" alt="foto-do-projeto">
+                <h3>Projeto Calculadora</h3>
+                <p>Calculadora desenvolvida como projeto prático a partir das aulas do canal DevClub, utilizando HTML,
+                    CSS e JavaScript.</p>
+
+                <div class="btn-group">
+                    <div class="btn">GitHub Repo</div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="input-box">
+            <h2 class="section-title">Entre em Contato</h2>
+
+            <div class="imgqr">
+                <img src="/img/WhatsApp Image jpeg.jpeg" alt="qr-code" class="imgqr">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="#about">Sobre</a>
+            </li>
+
+            <li>
+                <a href="#education">Formação</a>
+            </li>
+
+
+            <li>
+                <a href="#projects">Projetos</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contato</a>
+            </li>
+        </ul>
+
+        <p class="copyright">© 2026 Sofia fligikowski. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
