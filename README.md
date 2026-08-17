@@ -16,7 +16,7 @@ O portfólio está sendo construído utilizando tecnologias fundamentais do dese
 - Git
 - GitHub
 
-## 🎓 Sobre mim
+## Sobre mim
 
 Sou estudante de Análise e Desenvolvimento de Sistemas, atualmente focada em desenvolvimento Front-end e desenvolvimento web.
 
